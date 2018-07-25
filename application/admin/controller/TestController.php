@@ -15,7 +15,7 @@ class TestController extends Controller
      * @return \think\Response
      */
      public function model(){
-         echo '111';
+         echo '1115';
      	echo md5("123456".config('password_salt')); die;
 //     	$catModel = new Category();
 //     	$data = ['cat_name'=>'溜溜球','pid'=>10];
