@@ -4,6 +4,8 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Request;
+use think\Db;
+
 
 class TestController extends Controller
 {
@@ -12,74 +14,13 @@ class TestController extends Controller
      *
      * @return \think\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function model(){
+         echo '111';
+     	echo md5("123456".config('password_salt')); die;
+//     	$catModel = new Category();
+//     	$data = ['cat_name'=>'溜溜球','pid'=>10];
+//     	dump( $catModel->save($data) );
 
-    /**
-     * 显示创建资源表单页.
-     *
-     * @return \think\Response
-     */
-    public function create()
-    {
-        //
-    }
+     }
 
-    /**
-     * 保存新建的资源
-     *
-     * @param  \think\Request  $request
-     * @return \think\Response
-     */
-    public function save(Request $request)
-    {
-        //
-    }
-
-    /**
-     * 显示指定的资源
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function read($id)
-    {
-        //
-    }
-
-    /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * 保存更新的资源
-     *
-     * @param  \think\Request  $request
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * 删除指定资源
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function delete($id)
-    {
-        //
-    }
 }

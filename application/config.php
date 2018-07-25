@@ -13,9 +13,13 @@ return [
     // +----------------------------------------------------------------------
     // | 应用设置
     // +----------------------------------------------------------------------
+    // 密码的加密盐
+    'password_salt' => '%^$U&%&I',
+    // 定义后台资源的目录路径
+    'title' => 'yingyong', // ??
     'admin_static'           => '/static/admin',
     // 应用调试模式
-    'app_debug'              => true, //默认为false 上线设置为false
+    'app_debug'              => true, //默认为false 上线设置为false 开启调试模式
     // 应用Trace
     'app_trace'              => false,
     // 应用模式状态
@@ -45,7 +49,7 @@ return [
     // 默认语言
     'default_lang'           => 'zh-cn',
     // 应用类库后缀
-    'class_suffix'           => 'false',
+    'class_suffix'           => false, //注意 false不加盟引号
     // 控制器类后缀
     'controller_suffix'      => 'Controller', // 默认false
 
