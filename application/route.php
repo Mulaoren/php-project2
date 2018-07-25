@@ -35,3 +35,4 @@ Route::get("top", 'admin/index/top');
 Route::get("left", 'admin/index/left');
 Route::get("main", 'admin/index/main');
 //输出登录页面的路由
+//待
