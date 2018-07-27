@@ -53,8 +53,22 @@ Route::post("login", "admin/public/login");
 //});
 
 Route::group('admin',function(){
-//    Route::get('test/index2','admin/test/index2');
-//    Route::any('test/index3','admin/test/index3');
-//    Route::any('test/index4','admin/test/index4');
-    Route::any('test/model','admin/test/model');
+
+    Route::get("category/add", 'admin/category/add');
+    Route::post("category/add", 'admin/category/add');
+    // 分类列表
+    Route::get("category/index", 'admin/category/index');
+    Route::post("category/index", 'admin/category/index');
+    //编辑分类
+    Route::get("category/upd", 'admin/category/upd');
+    Route::post("category/upd", 'admin/category/upd');
+    //分类删除
+    Route::get("category/ajaxDel", 'admin/category/ajaxDel');
+    // 添加文章
+    Route::get('article/add', "admin/article/add");
+    Route::post('article/add', "admin/article/add");
+    // 文章列表
+    Route::get('article/index', "admin/article/index");
+    // 测试路由
+    Route::any("test/model",'admin/test/model');
 });

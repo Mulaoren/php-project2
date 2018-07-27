@@ -45,11 +45,20 @@
             <div class="title"><span><img src="{:config('admin_static')}/images/leftico01.png" /></span>商品分类</div>
             <ul class="menuson">
                 <li>
-                    <cite></cite><a href="#">分类列表</a><i></i></li>
+                    <cite></cite><a href="{:url('admin/category/index')}" target="rightFrame">分类列表</a><i></i></li>
                 <li>
-                    <cite></cite><a href="#">添加分类</a><i></i></li>
+                    <cite></cite><a href="{:url('admin/category/add')}" target="rightFrame">添加分类</a><i></i></li>
             </ul>
-        </dd>        
+        </dd>
+        <dd>
+            <div class="title"><span><img src="{:config('admin_static')}/images/leftico01.png" /></span>文章管理</div>
+            <ul class="menuson">
+                <li>
+                    <cite></cite><a href="{:url('admin/article/index')}" target="rightFrame">文章列表</a><i></i></li>
+                <li>
+                    <cite></cite><a href="{:url('admin/article/add')}" target="rightFrame">添加文章</a><i></i></li>
+            </ul>
+        </dd>
         <dd>
             <div class="title">
                 <span><img src="{:config('admin_static')}/images/leftico01.png" /></span>商品类型

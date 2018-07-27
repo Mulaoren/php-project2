@@ -14,7 +14,7 @@ class User extends Model{
             'username' => $username,
             'password' => md5($password.config('password_salt')),
         ];
-        $userInfo = $this->where($where)->find(); //$userInfo是一个数据对象
+        $userInfo = $this->where($where)->find(); //1.$userInfo是一个数据对象 2.失败为null 3.$this 为谁调用就是谁
         if($userInfo ){
             //用户信息存储到session中去
             session('user_id',$userInfo['user_id']);

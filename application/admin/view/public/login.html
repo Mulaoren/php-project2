@@ -47,7 +47,7 @@
                     </li>
                     <li>
                         <input type="text" name="captcha" style="width: 100px" class="loginpwd" placeholder="验证码" />
-                        <img src="" alt='验证码' id='changeCaptcha' />
+                        <img src="{:captcha_src()}" alt='验证码' id='changeCaptcha' />
                     </li>
                     <li>
                         <input name="" type="submit" class="loginbtn" value="登录" />
@@ -59,5 +59,16 @@
     </form>
     <div class="loginbm">版权所有 &copy;2016 <a href="http://www.itcast.cn/php">传智播客教育集团 PHP学院</a> </div>
 </body>
+<script type="text/javascript">
+    // 单击更换验证码
+    $("#changeCaptcha").on("click", function(){
+        $(this).attr("src","{:captcha_src()}?_=" + Math.random());
+    });
 
+    //防止页面打回来的时候，还是之前的缓存，
+    //页面打回来js代码会执行一遍，html还是之前的缓存
+    //让验证码自执行单击事件(前提是，已经绑定了单击事件才行)
+    $("#changeCaptcha").click();
+
+</script>
 </html>
