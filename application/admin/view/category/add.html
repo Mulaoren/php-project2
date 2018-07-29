@@ -5,10 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="{:config('admin_static')}/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- 确保jquery在jquery.validate.js之前引入 -->
     <script language="JavaScript" src="{:config('admin_static')}/js/jquery.js"></script>
+    <script language="JavaScript" src="/static/plugins/jquery.validate.js"></script>
     <style>
         .active{
             border-bottom: solid 3px #66c9f3;
+        }
+        label.error{
+            color:red;
+            width: 100px;
         }
     </style>
 </head>
@@ -25,7 +31,7 @@
         <div class="formtitle">
             <span class="active">基本信息</span>
         </div>
-        <form action="{:url('admin/category/add')}" method="post">
+        <form action="{:url('admin/category/add')}" id='add_cat' method="post">
             <ul class="forminfo">
                 <li>
                     <label>分类名称</label>
@@ -51,7 +57,37 @@
     </div>
 </body>
 <script>
-    
+    //添加分类的验证
+//    $("#add_cat").validate({
+//        //验证规则
+//        rules:{
+//            "cat_name":{
+//                "required":true,
+//                "minlength":5
+//            },
+//            'pid':{
+//                //调用自定义的验证规则
+//                "checkCatId":''
+//            }
+//        },
+//        //验证不通过的提示信息
+//        messages:{
+//            "cat_name":{
+//                "required":"分类名称必填",
+//                "minlength":"分类名称最少为5个字符"
+//            }
+//        }
+//    });
+//
+//    //实现自定义验证规则
+//    $.validator.addMethod('checkCatId',function(value,ele,param){
+//        console.log(value,ele,param);
+//        //return false; 验证失败
+//        //return true; 验证成功
+//        return value  == '' ? false :true; //
+//        // return ele.value  == '' ? false :true; //DOM方式
+//        //return $(ele).val()  == '' ? false :true; //jquery对象方式
+//    },'必须选择一个分类');
 </script>
 
 </html>

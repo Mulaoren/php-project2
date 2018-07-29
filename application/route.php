@@ -69,6 +69,14 @@ Route::group('admin',function(){
     Route::post('article/add', "admin/article/add");
     // 文章列表
     Route::get('article/index', "admin/article/index");
+    // 文章编辑
+    Route::get('article/upd', "admin/article/upd");// 回显页面
+    Route::post('article/upd', "admin/article/upd");
+    // 文章删除
+    Route::get('article/del', "admin/article/del");
+    //文章数据操作的相关路由
+    Route::get("article/getContent",'admin/article/getContent'); //查看文章内容的路由
+
     // 测试路由
     Route::any("test/model",'admin/test/model');
 });

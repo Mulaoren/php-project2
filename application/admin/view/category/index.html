@@ -116,6 +116,7 @@
         }
         var _self = $(this);
         var url = "{:url('/admin/category/ajaxDel')}";//注意引号
+        // @@自动定义属性方便保存id
         var cat_id = _self.attr('cat_id');
         //$.get(url[,data][,callback][,type])//后三个参数可选 服务器端返回内容的样式，包括xml、html、script、json、text和_default
         $.get(url, {"cat_id": cat_id}, function (res) {
